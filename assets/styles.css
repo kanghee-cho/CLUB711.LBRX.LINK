@@ -108,6 +108,21 @@ footer {
   color: var(--ink);
 }
 
+.unlock-page {
+  display: grid;
+  place-items: center;
+  padding: 32px 24px;
+  border-top: 0;
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.unlock-shell { width: 100%; max-width: 400px; }
+.unlock-shell h1 { font-size: 32px; font-weight: 600; line-height: 1.4; letter-spacing: -.05em; }
+.unlock-shell .intro { margin-top: 16px; font-size: 14px; line-height: 1.8; word-break: keep-all; }
+.unlock-shell form { margin-top: 28px; }
+.unlock-shell input, .unlock-shell button, .unlock-shell .status { font-family: inherit; letter-spacing: 0; }
+.unlock-shell .status { margin: 12px 0 0; }
+
 .reunion-hero {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
