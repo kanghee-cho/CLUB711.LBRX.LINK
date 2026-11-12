@@ -217,7 +217,17 @@ h2 {
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
 .section-heading .eyebrow { margin-bottom: 16px; }
 .updated-at { margin: 0 0 8px; font-size: 11px; color: var(--muted); }
-.section-description { margin: 16px 0 28px; font-size: 13px; line-height: 1.9; color: var(--muted); }
+.section-description {
+  margin: 20px 0 28px;
+  padding: 18px 20px;
+  border-left: 4px solid var(--ink);
+  background: #e1e9d8;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.9;
+  word-break: keep-all;
+}
 .fund-summary { padding: 28px 32px; border: 1px solid var(--rule); }
 .fund-summary dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0 0 28px; }
 .fund-summary dt { font-size: 11px; color: var(--muted); }
@@ -276,6 +286,7 @@ tfoot tr > :first-child { background: #e7e8dc; }
   .account-number { font-size: 28px; }
   .section-heading { display: block; }
   .updated-at { margin-top: 16px; }
+  .section-description { padding: 14px 16px; font-size: 15px; }
   .fund-summary { padding: 20px 16px; }
   .fund-summary dl { gap: 12px; }
   .fund-summary dd { font-size: 16px; }
