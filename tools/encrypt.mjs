@@ -49,31 +49,23 @@ export function renderPage(payload) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
     <meta name="referrer" content="no-referrer">
-    <title>CLUB711 | 비공개 페이지</title>
+    <title>세븐일레븐</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script src="assets/unlock.js" defer></script>
   </head>
-  <body>
-    <main class="sheet">
-      <header class="masthead">
-        <span class="wordmark">CLUB711</span>
-        <span class="edition">PRIVATE ACCESS / 711</span>
-      </header>
-      <section class="content">
-        <p class="eyebrow">우리만을 위한 공간</p>
-        <h1>우리만의<br>이야기.</h1>
-        <p class="intro">전달받은 비밀번호를 입력하면<br>공지와 입금현황을 확인할 수 있습니다.</p>
-        <form id="unlock-form">
-          <label for="password">비밀번호</label>
-          <div class="password-row">
-            <input id="password" type="password" autocomplete="current-password" required>
-            <button type="submit">열기 &rarr;</button>
-          </div>
-          <p id="status" class="status" role="status" aria-live="polite"></p>
-        </form>
-        <noscript>이 페이지를 열려면 JavaScript를 허용해주세요.</noscript>
-      </section>
-      <footer><span>CLUB711 &mdash; PRIVATE NOTES</span><span>ENCRYPTED EDITION</span></footer>
+  <body class="unlock-page">
+    <main class="unlock-shell" aria-labelledby="unlock-title">
+      <h1 id="unlock-title">세븐일레븐</h1>
+      <p class="intro">전달받은 비밀번호를 입력하면, 공지와 입금현황을 확인할 수 있습니다.</p>
+      <form id="unlock-form">
+        <label for="password" class="sr-only">비밀번호</label>
+        <div class="password-row">
+          <input id="password" type="password" autocomplete="current-password" placeholder="비밀번호" required>
+          <button type="submit">확인</button>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <noscript>이 페이지를 열려면 JavaScript를 허용해주세요.</noscript>
     </main>
     <script id="encrypted-page" type="application/json">${JSON.stringify(payload)}</script>
   </body>
