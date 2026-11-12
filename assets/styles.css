@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  --paper: #f2efe7;
+  --ink: #203d34;
+  --muted: #656e63;
+  --rule: #c7cabe;
+  --accent: #c7dc9f;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  border-top: 6px solid var(--ink);
+}
+
+.sheet {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 48px;
+}
+
+.masthead, footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.masthead {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.wordmark { font-size: 24px; font-weight: bold; letter-spacing: -.06em; }
+
+.edition, .eyebrow, footer, label, input, button, .status {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  letter-spacing: .06em;
+}
+
+.edition, footer, .eyebrow { color: var(--muted); }
+.content { padding: clamp(48px, 10vh, 112px) 0 80px; }
+.eyebrow { margin: 0 0 28px; }
+
+h1 {
+  margin: 0;
+  max-width: 800px;
+  font-weight: normal;
+  font-size: clamp(48px, 9vw, 100px);
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+
+.intro {
+  margin: 28px 0 0;
+  max-width: 520px;
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+form { margin-top: 36px; max-width: 440px; }
+label { display: block; margin-bottom: 10px; }
+.password-row { display: flex; gap: 8px; }
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 20px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  color: var(--paper);
+  background: var(--ink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:disabled { opacity: .6; cursor: wait; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.status { min-height: 3em; line-height: 1.6; }
+.status[data-error] { color: #983b2d; }
+
+footer {
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 10px;
+}
+
+.text-button {
+  border: 0;
+  padding: 8px 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.reunion-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding: 80px 0;
+}
+
+.reunion-hero h1 {
+  font-family: Batang, "바탕", "Palatino Linotype", serif;
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.3;
+  letter-spacing: -.065em;
+  word-break: keep-all;
+}
+
+.reunion-hero h1 > span { font-size: .7em; }
+
+.reunion-hero .intro, .notice-copy, .account-card,
+.section-description, .fund-summary, .ledger-toolbar, .ledger-status,
+.table-scroll, .table-note, .hero-meta, .updated-at, .countdown-note {
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+}
+
+.reunion-hero .intro { font-size: 15px; line-height: 1.9; word-break: keep-all; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 32px; font-size: 12px; }
+.hero-meta > span + span { color: var(--muted); }
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  padding: 32px 16px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #e5e9d8, transparent 70%);
+  text-align: center;
+}
+
+.countdown .eyebrow { margin-bottom: 16px; }
+.countdown > strong { font-weight: normal; font-size: clamp(42px, 6vw, 78px); letter-spacing: -.05em; }
+.countdown > time { margin-top: 14px; font-size: 19px; letter-spacing: .12em; }
+.countdown-note { margin-top: 24px; font-size: 10px; color: var(--muted); }
+
+.notice-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 64px;
+  padding: 56px 0 64px;
+  border-top: 1px solid var(--ink);
+}
+
+h2 {
+  margin: 0;
+  font-family: Batang, "바탕", "Palatino Linotype", serif;
+  font-size: clamp(27px, 3.5vw, 38px);
+  line-height: 1.5;
+  font-weight: normal;
+  letter-spacing: -.04em;
+  word-break: keep-all;
+}
+
+.notice-copy > p:not(.eyebrow) { margin: 24px 0; color: var(--muted); font-size: 14px; line-height: 1.95; word-break: keep-all; }
+.notice-copy strong { color: var(--ink); }
+.plan-details { margin: 24px 0 0; font-size: 13px; }
+.plan-details > div { display: flex; gap: 16px; padding: 13px 0; border-top: 1px solid var(--rule); }
+.plan-details dt { flex: 0 0 80px; color: var(--muted); }
+.plan-details dd { margin: 0; }
+.plan-details dd span { display: inline-block; margin-left: 8px; color: var(--muted); font-size: 11px; }
+
+.account-card {
+  align-self: center;
+  position: relative;
+  padding: 40px 32px 28px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.account-symbol { position: absolute; top: 16px; right: 24px; color: var(--accent); font-size: 32px; }
+.account-card .eyebrow { color: var(--accent); margin: 0 0 32px; }
+.account-card h3 { margin: 0 0 8px; font-size: 15px; font-weight: normal; }
+.account-number { margin: 0; font-size: clamp(19px, 2.5vw, 30px); letter-spacing: -.035em; overflow-wrap: anywhere; }
+.copy-button { display: flex; justify-content: space-between; width: 100%; margin-top: 28px; border-color: #839c8d; font-family: inherit; letter-spacing: 0; text-align: left; }
+.account-card :focus-visible { outline-color: var(--accent); }
+.copy-status { min-height: 1.5em; margin: 10px 0; font-size: 11px; line-height: 1.7; color: var(--accent); }
+.copy-status[data-error] { color: #ffceac; }
+.account-note { margin: 16px 0 0; padding-top: 20px; border-top: 1px solid #536a5e; font-size: 11px; line-height: 1.8; color: #c1ccbf; }
+
+.ledger-section { padding: 48px 0 64px; border-top: 1px solid var(--ink); }
+.section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
+.section-heading .eyebrow { margin-bottom: 16px; }
+.updated-at { margin: 0 0 8px; font-size: 11px; color: var(--muted); }
+.section-description { margin: 16px 0 28px; font-size: 13px; line-height: 1.9; color: var(--muted); }
+.fund-summary { padding: 28px 32px; border: 1px solid var(--rule); }
+.fund-summary dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0 0 28px; }
+.fund-summary dt { font-size: 11px; color: var(--muted); }
+.fund-summary dd { margin: 10px 0 0; font-size: clamp(18px, 2.5vw, 27px); font-weight: bold; letter-spacing: -.055em; }
+.progress-label { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 11px; color: var(--muted); }
+progress { display: block; width: 100%; height: 6px; border: 0; background: #dce0d1; accent-color: var(--ink); }
+progress::-webkit-progress-bar { background: #dce0d1; }
+progress::-webkit-progress-value { background: var(--ink); }
+progress::-moz-progress-bar { background: var(--ink); }
+.ledger-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; font-size: 11px; color: var(--muted); }
+.legend { display: flex; align-items: center; gap: 8px; }
+.legend-dot { display: inline-block; width: 7px; height: 7px; margin-left: 8px; border-radius: 50%; }
+.legend-dot:first-child { margin-left: 0; }
+.legend-dot.paid { background: var(--ink); }
+.legend-dot.partial { background: #ad7c38; }
+.legend-dot.scheduled { background: #b7beaf; }
+.ledger-status { margin: 8px 0 16px; font-size: 12px; line-height: 1.8; color: var(--muted); }
+.ledger-status[data-error] { color: #983b2d; }
+.table-scroll { overflow-x: auto; overscroll-behavior-x: contain; border-top: 1px solid var(--ink); }
+table { width: 100%; min-width: 1100px; border-collapse: separate; border-spacing: 0; font-size: 11px; white-space: nowrap; text-align: center; }
+th, td { padding: 17px 9px; border-bottom: 1px solid var(--rule); }
+thead th { background: #e7e8dc; font-weight: normal; color: var(--muted); }
+tbody th { font-size: 13px; font-weight: normal; }
+tr > :first-child { position: sticky; left: 0; z-index: 1; background: var(--paper); min-width: 82px; border-right: 1px solid var(--rule); }
+thead tr > :first-child { background: #e7e8dc; }
+td > small { display: block; margin-top: 5px; font-size: 10px; color: var(--muted); }
+.payment-status { display: inline-block; min-width: 38px; padding: 4px 5px; border-radius: 3px; font-size: 10px; }
+.payment-status.paid { color: var(--ink); background: #dce5ce; }
+.payment-status.partial { color: #825a20; background: #efe2c7; }
+.payment-status.scheduled { color: #757d70; background: #e8e9df; }
+.payment-status.unpaid { color: #965345; background: #efe1da; }
+.member-total { font-weight: bold; }
+.member-total > small { font-weight: normal; }
+tfoot td, tfoot th { padding-top: 20px; padding-bottom: 20px; background: #e7e8dc; font-weight: bold; }
+tfoot tr > :first-child { background: #e7e8dc; }
+.table-note { margin: 16px 0 0; font-size: 11px; line-height: 1.9; color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 850px) {
+  .reunion-hero { gap: 24px; padding: 56px 0; }
+  .notice-grid { gap: 28px; }
+  .account-card { padding: 32px 24px 24px; }
+  .fund-summary { padding: 24px; }
+}
+
+@media (max-width: 600px) {
+  .sheet { padding: 24px; }
+  .edition { font-size: 9px; }
+  footer { flex-wrap: wrap; }
+  .reunion-hero { grid-template-columns: 1fr; gap: 32px; padding: 40px 0; }
+  .reunion-hero h1 { font-size: clamp(36px, 10vw, 52px); }
+  .countdown { width: 100%; max-width: 300px; margin: 0 auto; padding: 24px; }
+  .countdown > strong { font-size: 64px; }
+  .notice-grid { grid-template-columns: 1fr; padding-top: 36px; gap: 28px; }
+  .account-card { padding: 32px 24px 20px; }
+  .account-number { font-size: 28px; }
+  .section-heading { display: block; }
+  .updated-at { margin-top: 16px; }
+  .fund-summary { padding: 20px 16px; }
+  .fund-summary dl { gap: 12px; }
+  .fund-summary dd { font-size: 16px; }
+  .fund-summary dt { font-size: 10px; }
+  .scroll-hint { margin: 0; }
+  .plan-details dd span { display: block; margin: 6px 0 0; }
+}
+
+@media (max-width: 400px) {
+  .fund-summary dl { grid-template-columns: 1fr; gap: 14px; }
+  .fund-summary dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+  .fund-summary dd { margin: 0; font-size: 19px; white-space: nowrap; }
+}
